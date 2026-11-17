@@ -26,6 +26,25 @@ Contents License). Exact terms not independently verified by Claude (see
 Kaggle page itself before any public/portfolio use beyond what's documented
 here.
 
+## Per-cell detection / counting dataset
+
+Baldé, A., Sall, O., Ossami, D.-D. O., Soumboundou, M., Sall, C., Faye, Y.,
+M'Kacher, R., Bassene, A., Faty, L., Wane, P. S., Dione, M., & Niass, O.
+(2026). "SKDrepaData: A Multisite West African Blood Smear Dataset for
+Automated Sickle Cell Disease Detection and Classification." MICCAI 2026
+Satellite Events. Zenodo. https://doi.org/10.5281/zenodo.21365925
+
+Open dataset export used for training this project's YOLOv8 detector:
+
+Baldé, A., Sall, C., Sall, O., Faye, Y., Soumboundou, M., M'Kacher, R.,
+Ossami, D.-D. O., Bassene, A., & Faty, L. (2026). "SKDrepaData: Dataset pour
+la détection et classification de cellules falciformes (Drépanocytose)."
+Zenodo. https://doi.org/10.5281/zenodo.20719504
+
+License: CC BY 4.0 (confirmed on the open Zenodo record). The v1 export's
+`data.yaml` and README also state CC BY 4.0. See `docs/skdrepadata.md` for the
+dataset verification, training configuration, and limitations.
+
 ## External validation dataset (compatibility limitations documented separately)
 
 Marrero Fernández, P. D., Coello Said, G., Delgado Font, W. E., Herold

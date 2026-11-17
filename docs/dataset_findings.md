@@ -374,3 +374,29 @@ Two things still need a decision before writing extraction code:
 **Nothing has been extracted or wired into training/evaluation.** Per the
 user's instruction, this remains at the inspection/counting stage until
 these two decisions are made.
+
+## SKDrepaData (per-cell detector training) - added later
+
+**What it is:** 1,861 full-field blood-smear images from 100+ patients at
+three West African sites, with 33,832 expert-annotated red blood cells
+(normal, sickle, and other abnormal). Published with MICCAI 2026 satellite
+events.
+
+**Records:** the paper's Zenodo record (21365925) is restricted. The authors'
+open three-part export is Zenodo record **20719504**, **CC BY 4.0**, ~275 MB
+total. Only the **v1** subset is used here: 1,487 full-field 640×640 images
+with **46,847 YOLO boxes** (other 17,813 / sickle 10,134 / normal 18,900) and
+a 1,302 / 123 / 62 train/valid/test split.
+
+**Leakage check:** 973 source-image prefixes; **0 prefixes span splits**.
+The export has no patient IDs, so the split is source-grouped, not
+patient-grouped.
+
+**Use:** trained a YOLOv8n detector for cell-level counting, replacing the
+Cellpose shape heuristic as the preferred counting mode. The field
+classifier is unchanged. Full details, training configuration, metrics, and
+limitations are in [`skdrepadata.md`](skdrepadata.md).
+
+**Why v2/v3 are not used:** v2 contains 33,832 class-organised 224×224 cell
+patches but no source-image IDs, so a leakage-safe grouped split cannot be
+built from it. v3 contains morphological descriptors with no class labels.

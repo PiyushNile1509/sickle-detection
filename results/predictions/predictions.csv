@@ -1,0 +1,3 @@
+image,prediction,confidence,prob_negative,prob_positive
+C:\Users\itspi\AppData\Local\Temp\opencode\smear_samples\107.jpg,negative,0.9731133580207825,0.9731133580207825,0.026886628940701485
+C:\Users\itspi\AppData\Local\Temp\opencode\smear_samples\115.jpg,positive,0.7461272478103638,0.2538727819919586,0.7461272478103638

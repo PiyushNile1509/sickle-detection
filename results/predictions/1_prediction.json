@@ -1,0 +1,14 @@
+{
+  "image": "data\\train_source\\Positive\\Unlabelled\\1.jpg",
+  "model": "mobilenet_v2",
+  "checkpoint": "D:\\project\\sickle\\models\\mobilenet_v2_sickle.pt",
+  "prediction": "positive",
+  "predicted_label": 1,
+  "confidence": 0.9733328819274902,
+  "probabilities": {
+    "negative": 0.026667088270187378,
+    "positive": 0.9733328819274902
+  },
+  "gradcam": null,
+  "disclaimer": "Research prototype only - NOT a medical diagnosis. Do not use this output for clinical decisions."
+}

@@ -1,0 +1,44 @@
+{
+  "split": "test",
+  "weights": "D:\\project\\sickle\\models\\skdrepadata_yolov8n.pt",
+  "imgsz": 640,
+  "conf": 0.001,
+  "iou": 0.7,
+  "precision": 0.7313706399455654,
+  "recall": 0.8322432639396972,
+  "mAP50": 0.8396130191863177,
+  "mAP50-95": 0.5489504306386929,
+  "per_class": [
+    {
+      "class_id": 0,
+      "class_name": "other",
+      "precision": 0.6434212421121432,
+      "recall": 0.808080041258315,
+      "mAP50": 0.7528011855914574,
+      "mAP50-95": 0.46283654297980686
+    },
+    {
+      "class_id": 1,
+      "class_name": "sickle",
+      "precision": 0.7367461203463949,
+      "recall": 0.8159977444445013,
+      "mAP50": 0.8520281566535889,
+      "mAP50-95": 0.555734020749729
+    },
+    {
+      "class_id": 2,
+      "class_name": "normal",
+      "precision": 0.8139445573781581,
+      "recall": 0.8726520061162749,
+      "mAP50": 0.9140097153139067,
+      "mAP50-95": 0.6282807281865427
+    }
+  ],
+  "results_dict": {
+    "metrics/precision(B)": 0.7313706399455654,
+    "metrics/recall(B)": 0.8322432639396972,
+    "metrics/mAP50(B)": 0.8396130191863177,
+    "metrics/mAP50-95(B)": 0.5489504306386929,
+    "fitness": 0.5489504306386929
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "ensemble": {
+    "accuracy": 0.9385964912280702,
+    "sensitivity": 0.9294117647058824,
+    "specificity": 0.9655172413793104,
+    "precision": 0.9875,
+    "f1": 0.9575757575757575,
+    "roc_auc": 0.9858012170385395,
+    "tp": 79,
+    "tn": 28,
+    "fp": 1,
+    "fn": 6,
+    "threshold": 0.5
+  },
+  "ensemble_tta": {
+    "accuracy": 0.9473684210526315,
+    "sensitivity": 0.9411764705882353,
+    "specificity": 0.9655172413793104,
+    "precision": 0.9876543209876543,
+    "f1": 0.963855421686747,
+    "roc_auc": 0.9845841784989857,
+    "tp": 80,
+    "tn": 28,
+    "fp": 1,
+    "fn": 5,
+    "threshold": 0.5
+  },
+  "mobilenet_v2": {
+    "accuracy": 0.9385964912280702,
+    "sensitivity": 0.9294117647058824,
+    "specificity": 0.9655172413793104,
+    "precision": 0.9875,
+    "f1": 0.9575757575757575,
+    "roc_auc": 0.9517241379310344,
+    "tp": 79,
+    "tn": 28,
+    "fp": 1,
+    "fn": 6,
+    "threshold": 0.5
+  },
+  "mobilenet_v2_tta": {
+    "accuracy": 0.9210526315789473,
+    "sensitivity": 0.9176470588235294,
+    "specificity": 0.9310344827586207,
+    "precision": 0.975,
+    "f1": 0.9454545454545454,
+    "roc_auc": 0.9513184584178499,
+    "tp": 78,
+    "tn": 27,
+    "fp": 2,
+    "fn": 7,
+    "threshold": 0.5
+  },
+  "resnet18": {
+    "accuracy": 0.9298245614035088,
+    "sensitivity": 0.9176470588235294,
+    "specificity": 0.9655172413793104,
+    "precision": 0.9873417721518988,
+    "f1": 0.9512195121951219,
+    "roc_auc": 0.9882352941176471,
+    "tp": 78,
+    "tn": 28,
+    "fp": 1,
+    "fn": 7,
+    "threshold": 0.5
+  },
+  "resnet18_tta": {
+    "accuracy": 0.9298245614035088,
+    "sensitivity": 0.9411764705882353,
+    "specificity": 0.896551724137931,
+    "precision": 0.963855421686747,
+    "f1": 0.9523809523809523,
+    "roc_auc": 0.9870182555780933,
+    "tp": 80,
+    "tn": 26,
+    "fp": 3,
+    "fn": 5,
+    "threshold": 0.5
+  },
+  "ensemble_tiled_mean": {
+    "accuracy": 0.8070175438596491,
+    "sensitivity": 0.9882352941176471,
+    "specificity": 0.27586206896551724,
+    "precision": 0.8,
+    "f1": 0.8842105263157894,
+    "roc_auc": 0.8182555780933063,
+    "tp": 84,
+    "tn": 8,
+    "fp": 21,
+    "fn": 1,
+    "threshold": 0.5
+  },
+  "ensemble_tiled_max": {
+    "accuracy": 0.7631578947368421,
+    "sensitivity": 1.0,
+    "specificity": 0.06896551724137931,
+    "precision": 0.7589285714285714,
+    "f1": 0.8629441624365483,
+    "roc_auc": 0.8572008113590264,
+    "tp": 85,
+    "tn": 2,
+    "fp": 27,
+    "fn": 0,
+    "threshold": 0.5
+  },
+  "ensemble_tiled_top25": {
+    "accuracy": 0.7807017543859649,
+    "sensitivity": 1.0,
+    "specificity": 0.13793103448275862,
+    "precision": 0.7727272727272727,
+    "f1": 0.8717948717948718,
+    "roc_auc": 0.8198782961460447,
+    "tp": 85,
+    "tn": 4,
+    "fp": 25,
+    "fn": 0,
+    "threshold": 0.5
+  },
+  "_meta": {
+    "split": "held_out_test",
+    "n_images": 114,
+    "n_positive": 85,
+    "n_negative": 29,
+    "checkpoints": [
+      "D:\\project\\sickle\\models\\mobilenet_v2_sickle.pt",
+      "D:\\project\\sickle\\models\\resnet18_sickle.pt"
+    ],
+    "tile_size": 512,
+    "tile_stride": 384
+  }
+}

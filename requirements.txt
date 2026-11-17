@@ -57,6 +57,25 @@ grad-cam>=1.5              # NOT in Colab by default - always install.
 # --- Experiment tracking / progress ---
 tqdm>=4.66                 # Colab already provides this.
 
+# --- Web demo (local Streamlit interface) ---
+# 1.50+ is needed for the `width="stretch"` element API used in app.py.
+streamlit>=1.50
+
+# --- Optional: cell segmentation/counting in the Streamlit demo ---
+# Cellpose is a separate pretrained segmentation model. It is not used by the
+# classifier or the training pipeline, and it downloads ~1.1 GB of weights on
+# first use. The Streamlit app can still show the field prediction + Grad-CAM
+# without it, but the "Cellpose shape heuristic" counting mode needs this
+# package.
+cellpose>=4.0
+
+# --- Optional: trained per-cell detector counting mode ---
+# Ultralytics trains/runs the YOLOv8 detector on SKDrepaData bounding boxes.
+# It is not needed for the field classifier, and it pulls in opencv-python.
+# The app falls back to the Cellpose heuristic when detector weights are
+# absent. See docs/skdrepadata.md.
+ultralytics>=8.4
+
 # --- Reproducibility / notebook use (only relevant outside Colab) ---
 jupyter>=1.0
 ipywidgets>=8.1

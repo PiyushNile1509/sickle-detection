@@ -1,8 +1,10 @@
 # Data (downloaded separately via src/download_data.py - do not commit raw images)
 /data/train_source/*
 /data/external_val/*
+/data/external/*
 !/data/train_source/.gitkeep
 !/data/external_val/.gitkeep
+!/data/external/.gitkeep
 
 # Model checkpoints (can be large; track via release/artifact storage instead)
 /models/*.pt

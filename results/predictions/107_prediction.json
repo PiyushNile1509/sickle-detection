@@ -1,0 +1,14 @@
+{
+  "image": "data\\train_source\\Negative\\Clear\\107.jpg",
+  "model": "resnet18",
+  "checkpoint": "models\\resnet18_sickle.pt",
+  "prediction": "negative",
+  "predicted_label": 0,
+  "confidence": 0.9353853464126587,
+  "probabilities": {
+    "negative": 0.9353853464126587,
+    "positive": 0.0646146610379219
+  },
+  "gradcam": "D:\\project\\sickle\\results\\predictions\\107_gradcam.png",
+  "disclaimer": "Research prototype only - NOT a medical diagnosis. Do not use this output for clinical decisions."
+}

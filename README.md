@@ -17,6 +17,7 @@ the automated development session.
 ## Project layout
 
 ```
+app.py        # Streamlit demo: field prediction + Grad-CAM + cell counts
 data/         # datasets (not committed - see .gitignore). train_source/ and
               # external_val/ are always kept separate and never mixed.
 notebooks/    # Colab notebooks for data download, inspection, and training
@@ -63,10 +64,51 @@ pip install -r requirements.txt
 Further notebooks/scripts (final training, evaluation) will be added here as the
 project progresses through its review checkpoints.
 
+## Inference and Streamlit demo
+
+Single-image inference from the command line:
+
+```bash
+python scripts/predict.py path/to/blood_smear.jpg --gradcam
+```
+
+Browser interface (upload an image, see the field prediction, Grad-CAM, and
+optional cell counts):
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+The field prediction comes from the trained CNN. Counting has two selectable
+modes:
+
+- **Trained detector (SKDrepaData)** - a YOLOv8n detector trained on
+  expert-annotated cells; it detects and classifies individual sickle /
+  normal / other-abnormal cells. Preferred when
+  `models/skdrepadata_yolov8n.pt` is present.
+- **Cellpose shape heuristic** - a separate segmentation pipeline with a
+  transparent shape rule, kept as a fallback and comparison.
+
+Neither counting mode is an output of the field classifier, and neither is a
+validated measurement. See [`docs/inference.md`](docs/inference.md),
+[`docs/skdrepadata.md`](docs/skdrepadata.md), and
+[`docs/counting.md`](docs/counting.md) for details and limitations.
+
+Detector counting is also available from the command line:
+
+```bash
+python scripts/count_cells.py path/to/blood_smear.jpg
+```
+
 ## Datasets
 
 - **Primary:** Sickle Cell Disease Dataset (Tushabe et al.), via Kaggle
   (`florencetushabe/sickle-cell-disease-dataset`)
+- **Per-cell detection/counting:** SKDrepaData-v1, via Zenodo
+  (open record 20719504, CC BY 4.0) - 1,487 fields with 46,847 annotated
+  sickle / normal / other-abnormal cells; used to train the YOLOv8 detector
+  (see `docs/skdrepadata.md`)
 - **Potential external validation:** erythrocytesIDB, via Zenodo
   (record 18299474) - found not to have a healthy/normal comparison group
   (see `docs/dataset_findings.md`)
